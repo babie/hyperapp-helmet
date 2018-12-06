@@ -1,0 +1,34 @@
+{
+  "name": "hyperapp-helmet",
+  "version": "0.1.0",
+  "description": "A package to rewrite <head> aka Helmet for Hyperapp.",
+  "main": "index.js",
+  "repository": "git@github.com:babie/hyperapp-helmet.git",
+  "author": "babie <babie.wildheart@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "lynt"
+  },
+  "devDependencies": {
+    "@types/traverse": "^0.6.32",
+    "lynt": "^0.5.4",
+    "prettier": "^1.15.3",
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {
+    "hyperapp": "^1.2.9",
+    "traverse": "^0.6.6"
+  },
+  "lynt": {
+    "typescript": true,
+    "react": true,
+    "ignore": ["tests/**/*.*", "fixtures/**/*.*"],
+    "rules": {
+      "jsx-no-lambda": "off"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "tslint-config-lynt",
+    "tslint-config-lynt-typed",
+    "tslint-config-lynt-react"
+  ]
+}
