@@ -8,30 +8,36 @@
   "author": "babie",
   "license": "MIT",
   "scripts": {
+    "test": "jest",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts{,x}\"",
     "lint": "lynt"
   },
   "devDependencies": {
+    "@types/jest": "^23.3.10",
     "@types/traverse": "^0.6.32",
+    "jest": "^23.6.0",
     "lynt": "^0.5.4",
     "prettier": "^1.15.3",
+    "ts-jest": "^23.10.5",
     "typescript": "^3.2.1"
   },
   "dependencies": {
     "hyperapp": "^1.2.9",
     "traverse": "^0.6.6"
   },
-  "files": [
-    "dist/**/*"
-  ],
+  "files": ["dist/**/*"],
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": "ts-jest"
+    },
+    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+  },
   "lynt": {
     "typescript": true,
     "react": true,
-    "ignore": [
-      "tests/**/*.*",
-      "fixtures/**/*.*"
-    ],
+    "ignore": ["tests/**/*.*", "fixtures/**/*.*"],
     "rules": {
       "jsx-no-lambda": "off"
     }
