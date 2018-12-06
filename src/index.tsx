@@ -26,7 +26,7 @@ const NodeToDOM = ({ nodeName, attributes, children }: VNode) => {
   return element
 }
 
-const updateTitle = (helmet: IHelmet) => {
+const updateTitle = (helmet: Helmet) => {
   const title = helmet.titleNode.children
     .filter<string>((child): child is string => !!child)
     .reduce((acc, child) => {
@@ -37,19 +37,19 @@ const updateTitle = (helmet: IHelmet) => {
   }
 }
 
-const appendOthers = (helmet: IHelmet) => {
+const appendOthers = (helmet: Helmet) => {
   const headElement = document.getElementsByTagName('head')[0]
   helmet.otherNodes
     .map((child: VNode) => NodeToDOM(child))
     .forEach((t: Element) => headElement.appendChild(t))
 }
 
-const appendHelmet = (helmet: IHelmet) => {
+const appendHelmet = (helmet: Helmet) => {
   updateTitle(helmet)
   appendOthers(helmet)
 }
 
-const removeHelmet = (helmet: IHelmet) => {
+const removeHelmet = (helmet: Helmet) => {
   const selector = `.${HELMET_CHILD_CLASS_NAME}.${helmet.key}`
 
   const headElement = document.getElementsByTagName('head')[0]
@@ -62,7 +62,7 @@ const removeHelmet = (helmet: IHelmet) => {
   })
 }
 
-const updateHelmet = (helmet: IHelmet) => {
+const updateHelmet = (helmet: Helmet) => {
   removeHelmet(helmet)
   appendHelmet(helmet)
 }
@@ -85,23 +85,23 @@ const setupNodes = (key: string, nodes: VNode[]): [VNode, VNode[]] => {
   return [titleNode, otherNodes]
 }
 
-interface IHelmet {
+interface Helmet {
   key: string
   titleNode: VNode
   otherNodes: VNode[]
 }
 
-interface IHelmetAttr {
+interface HelmetAttributes {
   key: string
 }
 
-export const Helmet: Component<IHelmetAttr, {}, {}> = (
-  attributes: IHelmetAttr,
+export const Helmet: Component<HelmetAttributes, {}, {}> = (
+  attributes: HelmetAttributes,
   children: any[]
 ) => {
   const key = attributes.key
   const [titleNode, otherNodes] = setupNodes(key, children)
-  const helmet: IHelmet = {
+  const helmet: Helmet = {
     key,
     titleNode,
     otherNodes

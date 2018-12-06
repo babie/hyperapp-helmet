@@ -2,11 +2,14 @@
   "name": "hyperapp-helmet",
   "version": "0.1.0",
   "description": "A package to rewrite <head> aka Helmet for Hyperapp.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "git@github.com:babie/hyperapp-helmet.git",
-  "author": "babie <babie.wildheart@gmail.com>",
+  "author": "babie",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts{,x}\"",
     "lint": "lynt"
   },
   "devDependencies": {
@@ -19,10 +22,16 @@
     "hyperapp": "^1.2.9",
     "traverse": "^0.6.6"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "lynt": {
     "typescript": true,
     "react": true,
-    "ignore": ["tests/**/*.*", "fixtures/**/*.*"],
+    "ignore": [
+      "tests/**/*.*",
+      "fixtures/**/*.*"
+    ],
     "rules": {
       "jsx-no-lambda": "off"
     }
