@@ -1,7 +1,7 @@
 import jsdom from 'jsdom'
 import { getHelmetNodes } from '../src/index'
 import { App } from './app/App'
-import traverse = require('traverse')
+import traverse from 'traverse'
 import { VNode } from 'hyperapp'
 
 declare var global: any

@@ -1,5 +1,5 @@
 import { h, VNode, Component } from 'hyperapp'
-import traverse = require('traverse')
+import traverse from 'traverse'
 
 const HELMET_PARENT_CLASS_NAME = 'hyperapp-helmet-parent'
 const HELMET_CHILD_CLASS_NAME = 'hyperapp-helmet-child'
