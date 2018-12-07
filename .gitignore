@@ -65,5 +65,8 @@ typings/
 *.map
 *.d.ts
 
+# VSCode
+.vscode
+
 # packaging
 /dist

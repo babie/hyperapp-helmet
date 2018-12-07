@@ -13,31 +13,57 @@
     "format": "prettier --write \"src/**/*.ts{,x}\"",
     "lint": "lynt"
   },
+  "peerDependencies": {
+    "hyperapp": "^1.2.9"
+  },
   "devDependencies": {
+    "@hyperapp/render": "^2.1.0",
+    "@hyperapp/router": "^0.7.1",
+    "@types/express": "^4.16.0",
     "@types/jest": "^23.3.10",
     "@types/traverse": "^0.6.32",
+    "express": "^4.16.4",
+    "hyperapp": "^1.2.9",
     "jest": "^23.6.0",
+    "jest-puppeteer": "^3.5.2",
+    "jsdom": "^13.0.0",
     "lynt": "^0.5.4",
     "prettier": "^1.15.3",
+    "puppeteer": "^1.11.0",
     "ts-jest": "^23.10.5",
     "typescript": "^3.2.1"
   },
   "dependencies": {
-    "hyperapp": "^1.2.9",
     "traverse": "^0.6.6"
   },
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "jest": {
     "transform": {
       "^.+\\.(t|j)sx?$": "ts-jest"
     },
     "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    }
   },
   "lynt": {
     "typescript": true,
     "react": true,
-    "ignore": ["tests/**/*.*", "fixtures/**/*.*"],
+    "ignore": [
+      "fixtures/**/*.*"
+    ],
     "rules": {
       "jsx-no-lambda": "off"
     }
