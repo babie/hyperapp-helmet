@@ -3,8 +3,8 @@
  */
 import { VNode } from 'hyperapp'
 import traverse from 'traverse'
-import { getHelmetNodes } from '../src/index'
-import { App } from './app/App'
+import { getHelmetNodes } from '../../src/index'
+import { App } from '../app/App'
 
 describe('hyperapp-helmet', () => {
   describe('getHelmetNodes()', () => {
