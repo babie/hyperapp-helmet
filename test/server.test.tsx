@@ -1,8 +1,8 @@
+import { VNode } from 'hyperapp'
 import jsdom from 'jsdom'
+import traverse from 'traverse'
 import { getHelmetNodes } from '../src/index'
 import { App } from './app/App'
-import traverse from 'traverse'
-import { VNode } from 'hyperapp'
 
 declare var global: any
 describe('hyperapp-helmet', () => {
