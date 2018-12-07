@@ -13,7 +13,7 @@ describe('getHelmetNodes()', () => {
     nodes = getHelmetNodes(App.view, App.state, App.actions)
   })
 
-  test('title', () => {
+  test('<title>', () => {
     const titleNode = traverse(nodes).reduce((acc: any, n: VNode) => {
       if (n && n.nodeName === 'title') {
         return [...acc, n]
@@ -23,7 +23,7 @@ describe('getHelmetNodes()', () => {
     expect(titleNode.children[0]).toBe('title-B')
   })
 
-  test('meta', () => {
+  test('<meta>', () => {
     const metaNodes = traverse(nodes).reduce((acc: any, n: VNode) => {
       if (n && n.nodeName === 'meta') {
         return [...acc, n]
@@ -52,7 +52,7 @@ describe('getHelmetNodes()', () => {
     })
   })
 
-  test('link', () => {
+  test('<link>', () => {
     const linkNodes = traverse(nodes).reduce((acc: any, n: VNode) => {
       if (n && n.nodeName === 'link') {
         return [...acc, n]
@@ -81,7 +81,7 @@ describe('getHelmetNodes()', () => {
     })
   })
 
-  test('script', () => {
+  test('<script>', () => {
     const scriptNodes = traverse(nodes).reduce((acc: any, n: VNode) => {
       if (n && n.nodeName === 'script') {
         return [...acc, n]
