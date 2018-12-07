@@ -1,20 +1,12 @@
+/**
+ * @jest-environment jsdom
+ */
 import { VNode } from 'hyperapp'
-import jsdom from 'jsdom'
 import traverse from 'traverse'
 import { getHelmetNodes } from '../src/index'
 import { App } from './app/App'
 
-declare var global: any
 describe('hyperapp-helmet', () => {
-  beforeAll(() => {
-    global.document = new jsdom.JSDOM(
-      '<!doctype html><html><body></body></html>',
-      { url: 'http://localhost' }
-    )
-    global.window = document.defaultView
-    global.navigator = { userAgent: 'node.js' }
-  })
-
   describe('getHelmetNodes()', () => {
     let nodes: VNode[]
     beforeAll(() => {
