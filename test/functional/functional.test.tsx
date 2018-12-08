@@ -1,12 +1,12 @@
 /**
  * @jest-environment puppeteer
  */
-describe('Google', () => {
+describe('Test Server', () => {
   beforeAll(async () => {
-    await page.goto('https://google.com')
+    await page.goto('http://localhost:3000/b')
   })
 
-  it('should display "google" text on page', async () => {
-    await expect(page).toMatch('google')
+  it('should display "template#helmet-b" element on page', async () => {
+    await expect(page).toMatchElement('template#helmet-b')
   })
 })

@@ -1,16 +1,16 @@
-import jsdom from 'jsdom'
+import { JSDOM } from 'jsdom'
+declare var global: any
+global.document = new JSDOM('<!doctype html><html><body></body></html>', {
+  url: 'http://localhost:3000'
+})
+global.window = global.document.window
+global.navigator = { userAgent: 'node.js' }
+
 import { renderToStream } from '@hyperapp/render'
 import express from 'express'
 
 import { App as A } from './App'
 import { Html } from './Html'
-
-declare var global: any
-global.document = new jsdom.JSDOM('<!doctype html><html><body></body></html>', {
-  url: 'http://localhost'
-})
-global.window = document.defaultView
-global.navigator = { userAgent: 'node.js' }
 
 const server = express()
 server.use(express.static('dist'))

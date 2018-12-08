@@ -70,3 +70,6 @@ typings/
 
 # packaging
 /dist
+
+# Parcel
+.cache
