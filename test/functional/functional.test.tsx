@@ -40,8 +40,18 @@ describe('Test Server', () => {
     )
   })
 
-  it("should display B component's template tags on page", async () => {
-    await expect(page).toMatchElement('template#helmet-b')
-    await expect(page).toMatchElement('a', { text: 'LinkToA' })
+  it("should display BB1 component's head tags on page", async () => {
+    await expect(page).toMatchElement(
+      'head meta.helmet-bb1[property="og:type"][content=article]'
+    )
+    await expect(page).toMatchElement(
+      'head link.helmet-bb1[rel=stylesheet][href="/bb1.css"]'
+    )
+    await expect(page).toMatchElement('head style.helmet-bb1', {
+      text: 'body { width: 100%; }'
+    })
+    await expect(page).toMatchElement(
+      'head script.helmet-bb1[src="/bb1.js"][defer]'
+    )
   })
 })
