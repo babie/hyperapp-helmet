@@ -54,4 +54,19 @@ describe('Test Server', () => {
       'head script.helmet-bb1[src="/bb1.js"][defer]'
     )
   })
+
+  it("should display BB2 component's head tags on page", async () => {
+    await expect(page).toMatchElement(
+      'head meta.helmet-bb2[property="og:title"][content=Title-BB2]'
+    )
+    await expect(page).toMatchElement(
+      'head link.helmet-bb2[rel=stylesheet][href="/bb2.css"]'
+    )
+    await expect(page).toMatchElement('head style.helmet-bb2', {
+      text: 'body { height: 200%; }'
+    })
+    await expect(page).toMatchElement(
+      'head script.helmet-bb2[src="/bb2.js"][defer]'
+    )
+  })
 })
