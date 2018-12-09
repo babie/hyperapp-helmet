@@ -13,7 +13,7 @@ import { App as A } from './App'
 import { Html } from './Html'
 
 const server = express()
-server.use(express.static('dist'))
+server.use(express.static('./'))
 server.get('/*', (req, res, next) => {
   A.state.location.pathname = req.path
   res.statusCode = 200

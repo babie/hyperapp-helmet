@@ -8,8 +8,11 @@
   "author": "babie",
   "license": "MIT",
   "scripts": {
-    "test:build:watch": "parcel watch test/app/server.ts --out-dir test/app --out-file server.js --target node",
-    "test": "jest",
+    "test:build:server": "parcel build test/app/server.ts --out-dir test/app --out-file server.js --target node",
+    "test:build:index": "parcel build test/app/index.ts --out-dir test/app --out-file index.js --target node",
+    "test:build": "run-p test:build:server test:build:index",
+    "test:start": "jest",
+    "test": "run-s test:build test:start",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts{,x}\"",
     "lint": "lynt"
@@ -33,6 +36,7 @@
     "jest-puppeteer": "^3.5.2",
     "jsdom": "^13.0.0",
     "lynt": "^0.5.4",
+    "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.10.3",
     "prettier": "^1.15.3",
     "puppeteer": "^1.11.0",

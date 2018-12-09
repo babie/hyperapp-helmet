@@ -19,7 +19,7 @@ export const Html: View<App.State, App.Actions> = (
           <base href="http://localhost:3000" />
           <link rel="stylesheet" href="/html.css" />
           <style>{'body { color: blue; }'}</style>
-          <script src="/html.js" defer />
+          <script src="./index.js" defer />
           {helmetNodes}
         </head>
         <body>
