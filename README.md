@@ -29,7 +29,7 @@ export const Some = () => (
       <meta name="description" content="anything" />
       <link rel="stylesheet" href="/style.css" />
       <style>{'body { background-color: green; }'}</style>
-      <script src="/index.js" defer />
+      <script src="/some.js" defer />
     </Helmet>
     <h1>Anything Else</h1>
     <article>anything else.</article>
