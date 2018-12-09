@@ -73,3 +73,7 @@ typings/
 
 # Parcel
 .cache
+
+# jest-puppeteer
+!/jest-puppeteer.config.js
+
