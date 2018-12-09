@@ -5,7 +5,7 @@ This package also supports [@hyperapp/router](https://github.com/hyperapp/router
 
 ## Versioning
 
-- &gt;=0.0.0 &lt;2.0.0: for Hyperapp V1
+- &gt;=1.0.0 &lt;2.0.0: for Hyperapp V1
 - &gt;=2.0.0 &lt;3.0.0: for Hyperapp V2
 
 ## Installation
