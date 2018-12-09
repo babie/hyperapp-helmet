@@ -1,6 +1,7 @@
 # Hyperapp Helmet
 
-Hyperapp Helmet is a package to update HTML &lt;head&gt; tags on Hyperapp framework. This package also supports `@hyperapp/render` and `@hyperapp/router`.
+Hyperapp Helmet is a package to update HTML &lt;head&gt; tags on [Hyperapp](https://github.com/jorgebucaran/hyperapp).
+This package also supports [@hyperapp/router](https://github.com/hyperapp/router) and [@hyperapp/render](https://github.com/kriasoft/hyperapp-render).
 
 ## Versioning
 
@@ -25,7 +26,6 @@ export const Some = () => (
   <div key="some">
     <Helmet key="some-helmet">
       <title>This is written in Helmet</title>
-      <base href="http://localhost:3000" />
       <meta name="description" content="anything" />
       <link rel="stylesheet" href="/style.css" />
       <style>{'body { background-color: green; }'}</style>
@@ -37,7 +37,7 @@ export const Some = () => (
 )
 ```
 
-### SSR
+### Server-Side Rendering
 
 html.js:
 
