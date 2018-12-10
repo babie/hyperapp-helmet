@@ -1,7 +1,12 @@
 # Hyperapp Helmet
 
-Hyperapp Helmet is a package to update HTML &lt;head&gt; tags on [Hyperapp](https://github.com/jorgebucaran/hyperapp).
-This package also supports [@hyperapp/router](https://github.com/hyperapp/router) and [@hyperapp/render](https://github.com/kriasoft/hyperapp-render).
+Hyperapp Helmet is a library to update HTML &lt;head&gt; tags on [Hyperapp](https://github.com/jorgebucaran/hyperapp).
+
+This library supports:
+
+- Server-Side Rendering with [@hyperapp/router](https://github.com/hyperapp/router) and [@hyperapp/render](https://github.com/kriasoft/hyperapp-render)
+- Nesting components
+- TypeScirpt
 
 ## Versioning
 
