@@ -37,6 +37,8 @@ export const Some = () => (
 )
 ```
 
+- Helmet Component must have `key`!
+
 ### Server-Side Rendering
 
 html.js:
@@ -104,6 +106,23 @@ server.listen(3000, () => {
   console.log(`Server is running.`)
 })
 ```
+
+## API
+
+### Helmet(attributes, children) => VNode
+
+returns &lt;template&gt;{children}&lt;template&gt; nodes and it add/update/remove tags in &lt;head&gt;&lt;/head&gt; on `oncreate`/`onupdate`/`onremove` lifecycle.
+
+- `attributes`: must have `key` prop.
+- `children`: supports `title`, `base`, `meta`, `link`, `style`, `script` tags.
+
+### getHelmetNodes(view, state, actions) => VNode[]
+
+returns nodes for implementing in &lt;head&gt;&lt;/head&gt;.
+
+- `view`: hyperapp view/nodes.
+- `state`: hyperapp state.
+- `actions`: hyperapp actions.
 
 ## Links
 
