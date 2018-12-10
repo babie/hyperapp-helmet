@@ -2,7 +2,9 @@
  * @jest-environment puppeteer
  */
 describe('Test Server', () => {
+  let page
   beforeAll(async () => {
+    page = await browser.newPage()
     await page.goto('http://localhost:3000/b')
   })
 
