@@ -1,6 +1,6 @@
 {
   "name": "hyperapp-helmet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package to update HTML head tags on Hyperapp framework.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

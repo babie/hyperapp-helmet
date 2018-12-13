@@ -1,4 +1,4 @@
-import { h, VNode, Component } from 'hyperapp'
+import { h, VNode } from 'hyperapp'
 import traverse from 'traverse'
 
 const HELMET_PARENT_CLASS_NAME = 'hyperapp-helmet-parent'
