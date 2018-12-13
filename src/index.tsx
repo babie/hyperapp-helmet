@@ -95,10 +95,7 @@ interface HelmetAttributes {
   key: string
 }
 
-export const Helmet: Component<HelmetAttributes, {}, {}> = (
-  attributes: HelmetAttributes,
-  children: any[]
-) => {
+export const Helmet = (attributes: HelmetAttributes, children: any[]) => {
   const key = attributes.key
   const [titleNode, otherNodes] = setupNodes(key, children)
   const helmet: Helmet = {
